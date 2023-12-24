@@ -1,0 +1,140 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('/christmas/images/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 750px;
+    /* overflow: hidden; */
+    perspective: 1200px;
+}
+
+#card {
+    margin-top: 100px;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    height: 600px;
+    width: 450px;
+    padding: 30px;
+    transform-style: preserve-3d;
+}
+
+.card-title {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    line-height: 30px;
+    transition: all 0.3s ease-out;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Lobster', cursive;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Caveat', cursive;
+    text-transform: uppercase;
+}
+
+/* Christmas lights */
+.christmas-light {
+    position: absolute;
+    background-color: #d4ff00;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.snowflake {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    animation: snowfall linear infinite;
+}
+
+@keyframes snowfall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+#card .image {
+    z-index: 2;
+
+}
+
+#card .image .santa,
+#card .image .tree,
+#card .image .tree1 {
+    position: absolute;
+    width: 400px;
+    transition: all 0.3s ease-out;
+}
+
+#card .image .santa {
+    top: 300px;
+    right: 350px;
+    z-index: 3;
+    width: 400px;
+
+}
+
+
+#card .image .tree {
+
+    left: 50px;
+    right: 100px;
+    z-index: 1;
+    /* margin-top: 20px; */
+    width: 400px;
+    border-radius: 50%;
+
+}
+
+/* #card .image .tree1 {
+    top: 300px;
+    left: 260px;
+    z-index: 2;
+} */
+
+#footer {
+    margin-bottom: 50px;
+    color: #777;
+    font-size: 14px;
+}
